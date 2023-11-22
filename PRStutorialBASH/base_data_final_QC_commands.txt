@@ -1,0 +1,376 @@
+    1  ls
+    2  pwd
+    3  ls
+    4  mkdir seq
+    5  pwd
+    6  cd seq
+    7  yfhgfhgf
+    8  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    9  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+   10  PWD
+   11  cd /Users/stelavilhar/Downloads
+   12  ls
+   13  ..
+   14  cd /Users/stelavilhar/Desktop
+   15  unzip Featurecounting.zip
+   16  ls Featurecounting/
+   17  ls To_send
+   18  ls Featurecounting
+   19  ls Featurecounting.zip
+   20  ls -lh Featurecounting/
+   21  head To_send/GCF_003018455.1_ASM301845v1_genomic.fna
+   22  head To_send/GCF_003018455.1_ASM301845v1_genomic_edit.gtf
+   23  head Sample1.bwa.read1.fastq.gz
+   24  cd /Users/stelavilhar/Desktop/To_send
+   25  head Sample1.bwa.read1.fastq.gz
+   26  gunzip Sample1.bwa.read1.fastq.gz
+   27  gunzip Sample1.bwa.read2.fastq.gz
+   28  gunzip Sample2.bwa.read1.fastq.gz
+   29  gunzip Sample2.bwa.read2.fastq.gz
+   30  sudo apt-get install bowtie2
+   31  head Sample1.bwa.read1.fast
+   32  head Sample1.bwa.read1.fastq
+   33  grep @  Sample1.bwa.read1.fastq | wc -l
+   34  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+   35  brew install fastqc
+   36  fastqc Sample1.bwa.read1.fastq
+   37  fastqc Sample1.bwa.read2.fastq
+   38  fastqc Sample2.bwa.read1.fastq
+   39  fastqc Sample2.bwa.read2.fastq
+   40  cat Sample1.bwa.read1.fastq Sample1.bwa.read2.fastq > Sample1_ALL.fastq
+   41  cat Sample2.bwa.read1.fastq Sample2.bwa.read2.fastq > Sample2_ALL.fastq
+   42  wget https://sourceforge.net/projects/bbmap/files/BBMap_38.84.tar.gz
+   43  $ brew install wget
+   44  $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+   45  mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew\n
+   46  brew install wget
+   47  wget https://sourceforge.net/projects/bbmap/files/BBMap_38.84.tar.gz
+   48  tar -x -v -f BBMap_38.84.tar.gz\n
+   49  sh bbmap/bbduk.sh in1=Sample1_ALL.fastq out1=/Sample1_ALL.TRIMMED.fastq ref=bbmap/resources/adapters.fa\n
+   50  tar -xvf ecoli_fasta.tar
+   51  brew install Bowtie2
+   52  bowtie2-build ecoli_fasta
+   53  bowtie2-build ecoli_fasta ecoli
+   54  bowtie2-build ecoli.fna ecoli
+   55  bowtie2 -x ecoli -1 Sample1_ALL.fastq -2 Sample2_ALL.fastq -S Output.sam
+   56  /Users/stelavilhar/Desktop/To_send/Output.sam; exit
+   57  sudo apt-get install samtools
+   58  brew install samtools
+   59  samtools --version
+   60  samtools view -bS Output.sam > Output.bam
+   61  samtools sort Output.bam -o Output.sorted.bam
+   62  samtools index Output.sorted.bam
+   63  samtools tview Output.sorted.bam
+   64  /Users/stelavilhar/E_coli.genome; exit
+   65  -a GCF_003018455.1_ASM301845v1_genomic_edit.gtf -t gene -p -o Output.txt *sorted.bam
+   66  subread -a GCF_003018455.1_ASM301845v1_genomic_edit.gtf -t gene -p -o Output.txt *sorted.bam
+   67  brew install subread
+   68  subread-2.0.1-source -a GCF_003018455.1_ASM301845v1_genomic_edit.gtf -t gene -p -o Output.txt *sorted.bam
+   69  subread-2.0.1-source/test/featureCounts -a GCF_003018455.1_ASM301845v1_genomic_edit.gtf -t gene -p -o Output.txt *sorted.bam
+   70  featureCounts -a GCF_003018455.1_ASM301845v1_genomic_edit.gtf -t gene -p -o Output.txt Output.sorted.bam
+   71  featureCounts -a GCF_003018455.1_ASM301845v1_genomic_edit.gtf -t Output.sorted.bam -p -o Output.txt
+   72  subread-2.0.1-source/test/featureCounts -a GCF_003018455.1_ASM301845v1_genomic_edit.gtf -t Output.sorted.bam -p -o Output.txt
+   73  pwd
+   74  cd /Users/stelavilhar/Desktop/To_send/subread-2.0.1-source
+   75  cd /Users/stelavilhar/Desktop/To_send/subread-2.0.1-source/test
+   76  cd /Users/stelavilhar/Desktop/To_send/subread-2.0.1-source/test/featurecounts
+   77  ..
+   78  subread-2.0.1-source/test/featureCounts -a GCF_003018455.1_ASM301845v1_genomic_edit.gtf -t 'exon' -p -o Output.txt Output.sorted.bam
+   79  cd ~subread-2.0.1-source/test/featureCounts
+   80  subread-2.0.1-MacOS-x86_64/bin/featureCounts -a GCF_003018455.1_ASM301845v1_genomic_edit.gtf -t gene -p -o Output.txt Output.sorted.bam
+   81  sudo subread-2.0.1-MacOS-x86_64/bin/featureCounts -a GCF_003018455.1_ASM301845v1_genomic_edit.gtf -t gene -p -o Output.txt Output.sorted.bam
+   82  subread-2.0.1-MacOS-x86_64/bin/featureCounts -a GCF_003018455.1_ASM301845v1_genomic_edit.gtf -t gene -p -o Output.txt Output.sorted.bam
+   83  cut -f1,7- Output.txt | tail -n+2 > Output_simplified.txt
+   84  cut -f1,7- Output.txt | tail -n+2 > Output_simplified.txt\n
+   85  cut -f1,7- Output.txt | tail -n+2 > Outputissimplified.txt\n
+   86  cut -f1,5- Output.txt | tail -n+2 > Outputsimplified.txt\n
+   87  ..
+   88  ssh stela@hydra.med.bris.ac.uk
+   89  ls
+   90  cd ..
+   91  ls
+   92  cd ..
+   93  ls
+   94  cd ..
+   95  ls
+   96  cd Users
+   97  ls
+   98  cd stelavilhar
+   99  ls
+  100  ssh stela@hydra.med.bris.ac.uk
+  101  sftp stela@hydra.med.bris.ac.uk
+  102  cd ..
+  103  ls
+  104  rm -rf ARC
+  105  cd ..
+  106  ls
+  107  cd stelavilhar
+  108  sftp stela@hydra.med.bris.ac.uk
+  109  ssh stela@hydra.med.bris.ac.uk
+  110  sftp stela@hydra.med.bris.ac.uk
+  111  ssh stela@hydra.med.bris.ac.uk
+  112  sftp stela@hydra.med.bris.ac.uk
+  113  multiqc
+  114  pip
+  115  phyton
+  116  python
+  117  curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+  118  pip
+  119  pip install -U pip
+  120  conda
+  121  python get-pip.py
+  122  pip install multiqc
+  123  pip
+  124  pip2
+  125  pip3
+  126  pip3 install multiqc
+  127  multiqc
+  128  cd myFirstBabyData/
+  129  pwd
+  130  ls
+  131  cd /Users/stelavilhar/Desktop/myFirstBabyData/
+  132  multiqc
+  133  multiqc .
+  134  ls
+  135  cd ..
+  136  cd Downloads/
+  137  sftp stela@hydra.med.bris.ac.uk
+  138  cd ..
+  139  cd /Users/stelavilhar/Desktop/myFirstBabyData/
+  140  multiqc .
+  141  cd ..
+  142  cd..
+  143  ssh stela@hydra.bris.med.ac.uk
+  144  ssh stela@hydra.med.bris.ac.uk
+  145  sftp stela@hydra.med.bris.ac.uk
+  146  cd home/stelavilhar/Downloads
+  147  pwd
+  148  cd /Users/stelavilhar/Downloads
+  149  sftp stela@hydra.med.bris.ac.uk
+  150  ssh stela@hydra.med.bris.ac.uk
+  151  sftp stela@hydra.med.bris.ac.uk
+  152  ssh stela@hydra.med.bris.ac.uk
+  153  vasopressin
+  154  ssh stela@hydra.med.bris.ac.uk
+  155  sftp stela@hydra.med.bris.ac.uk
+  156  ls
+  157  sftp stela@hydra.med.bris.ac.uk
+  158  get -r ./SAMPLE10_62Aligned.sortedByCoord.out.bam
+  159  sftp stela@hydra.med.bris.ac.uk
+  160  cd /Desktop/myFirstBabyData/
+  161  cd Desktop/
+  162  cd myFirstBabyData
+  163  multiqc .
+  164  sftp stela@hydra.med.bris.ac.uk
+  165  /Users/stelavilhar/Downloads/STAR_Rattus.sh; exit
+  166  sftp stela@hydra.med.bris.ac.uk
+  167  /Users/stelavilhar/Downloads/SAMPLE6_42Log.final.out; exit
+  168  ssh stela@hydra.med.bris.ac.uk
+  169  grep -i unique *final.out*
+  170  sftp stela@hydra.med.bris.ac.uk
+  171  cd ..
+  172  cd DRN
+  173  grep -i unique *final.out*
+  174  cd ..
+  175  cd ARC
+  176  sftp stela@hydra.med.bris.ac.uk
+  177  subread-2.0.1-MacOS-x86_64/bin/featureCounts -a Rattus_norvegicus.Rnor_6.0.100.gtf -t gene -p -o ARCOutput.txt *out.bam
+  178  cd ..
+  179  cd myFirstBabyData
+  180  subread-2.0.1-MacOS-x86_64/bin/featureCounts -a Rattus_norvegicus.Rnor_6.0.100.gtf -t gene -p -o DRNOutput.txt *out.bam
+  181  cut -f1,7- DRNOutput.txt | tail -n+2 > DRNOutput_simplified.txt
+  182  cd ..
+  183  cd ARC
+  184  cut -f1,7- ARCOutput.txt | tail -n+2 > ARCOutput_simplified.txt
+  185  cd ..
+  186  cd myFirstBabyData
+  187  sftp stela@hydra.med.bris.ac.uk
+  188  ssh stela@hydra.med.bris.ac.uk
+  189  /Users/stelavilhar/Downloads/STAR_Rattus.sh; exit
+  190  ssh stela@hydra.med.bris.ac.uk
+  191  sftp stela@hydra.med.bris.ac.uk
+  192  multiqc .
+  193  sftp stela@hydra.med.bris.ac.uk
+  194  samtools sort SAMPLE1_37Aligned.sortedByCoord.out.bam -o SAMPLE1_37_.sorted.bam\n
+  195  /Users/stelavilhar/Desktop/myFirstBabyData/SAMPLE1_37Aligned.sortedByCoord.out.bam 
+  196  subread-2.0.1-MacOS-x86_64/bin/featureCounts -a Rattus_norvegicus.Rnor_6.0.100.gtf -t gene -p -o DRN.txt *bam
+  197  ssh stela@hydra.med.bris.ac.uk
+  198  cut -f1,7- DRN.txt | tail -n+2 > DRN_simplified.txt\n
+  199  ssh stela@hydra.med.bris.ac.uk
+  200  cd home/stelavilhar/Desktop/myFirstBabyData
+  201  cd /Users/stelavilhar/Desktop/myFirstBabyData
+  202  sftp stela@hydra.med.bris.ac.uk
+  203  ssh stela@hydra.med.bris.ac.uk
+  204  sftp stela@hydra.med.bris.ac.uk
+  205  samtools view -bS Aligned.out.sam > SAMPLE1/37_aligned.bam
+  206  samtools view -bS Aligned.out.sam > SAMPLE1_37_aligned.bam
+  207  sftp stela@hydra.med.bris.ac.uk
+  208  get -r Log.final.out
+  209  sftp stela@hydra.med.bris.ac.uk
+  210  subread-2.0.1-MacOS-x86_64/bin/featureCounts -a Rattus_norvegicus.Rnor_6.0.100.gtf -t -o DRNstela.txt *bam
+  211  subread-2.0.1-MacOS-x86_64/bin/featureCounts -a Rattus_norvegicus.Rnor_6.0.100.gtf -t gene -p -o DRNstela.txt *bam
+  212  cut -f1,7- DRNstela.txt | tail -n+2 > DRNstela_simplified.txt\n
+  213  multigc .
+  214  multiqc .
+  215  ssh stela@hydra.med.bris.ac.uk
+  216  /Users/stelavilhar/Downloads/mysql-8.0.21-macos10.15-x86_64/bin/mysql ; exit;
+  217  cd ..
+  218  ls
+  219  cd downloads
+  220  brew install mysql
+  221  brew services start mysql
+  222  mysql_secure_installation
+  223  brew services stop mysql
+  224  mysql.server start
+  225  mysql.server stop
+  226  mysql -u root -p
+  227  mysql
+  228  echo 'export PATH = /usr/local/mysql/bin/:$PATH' >>~/.bash_profile
+  229  .~/.bash_profile
+  230  ls
+  231  cd ..
+  232  ls
+  233  cd private
+  234  cd var/folders
+  235  ls
+  236  cd zz
+  237  ls
+  238  cd zyxvpxvq6csfxvn_n0000
+  239  ls
+  240  sstp
+  241  jfn
+  242  sjfjs
+  243  Users/stelavilhar/Desktop/minerva_author_v1_4_10_macos/minerva_author ; exit;
+  244  /Users/stelavilhar/Desktop/minerva_author_v1_4_10_macos/minerva_author ; exit;
+  245  ls
+  246  mkdir myPhD
+  247  cd
+  248  cd myPhD
+  249  curl -X GET
+  250  curl -X GET 'https://www.pgscatalog.org/rest/score/all' -H 'Content-type:application/json' -d '{ "filter_ids" : ["PGS000001", "PGS000002"] }'
+  251  curl -X GET "https://www.pgscatalog.org/rest/score/PGS000001" -H  "accept: application/json"
+  252  curl
+  253  curl -x
+  254  curl --x
+  255  curl --help
+  256  curl -X GET 'https://www.pgscatalog.org/rest/score/all' -H 'Content-type:application/json' -d '{ "filter_ids" : ["PGS000001", "PGS000002"] }'
+  257  curl
+  258  curl -V
+  259  zsh
+  260  curl -X GET 'https://www.pgscatalog.org/rest/score/all' -H 'Content-type:application/json' -d '{ "filter_ids" : ["PGS000001", "PGS000002"] }'
+  261  curl
+  262  curl --help
+  263  curl -X GET 'https://www.pgscatalog.org/rest/score/all' -H 'Content-type:application/json' -d '{ "filter_ids" : ["PGS000001", "PGS000002"] }'
+  264  curl -X GET 'https://www.pgscatalog.org/rest/score/all' -H 'Content-type:application/json' -d '{ "filter_ids" : ["PGS000001", "PGS000002"] }' --http1.1
+  265  update
+  266  omz update
+  267  curl -X GET 'https://www.pgscatalog.org/rest/score/all' -H 'Content-type:application/json' -d '{ "filter_ids" : ["PGS000001", "PGS000002"] }'
+  268  brew install curl wget w3m lynx elinks
+  269  curl -X GET 'https://www.pgscatalog.org/rest/score/all' -H 'Content-type:application/json' -d '{ "filter_ids" : ["PGS000001", "PGS000002"] }'
+  270  ccurl -X GET 'https://www.pgscatalog.org/rest/score/all' -H 'Content-type:application/json' -d '{ "filter_ids" : ["PGS000001", "PGS000002"] }'
+  271  curl -X GET 'https://www.pgscatalog.org/rest/score/all' -H 'Content-type:application/json' -d '{ "filter_ids" : ["PGS000001", "PGS000002"] }'
+  272  curl --http1.1
+  273  curl --http1.1 -X GET 'https://www.pgscatalog.org/rest/score/all' -H 'Content-type:application/json' -d '{ "filter_ids" : ["PGS000001", "PGS000002"] }'
+  274  curl_setopt($curl, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
+  275  curl_setopt($curl, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);\u200b -X GET 'https://www.pgscatalog.org/rest/score/all' -H 'Content-type:application/json' -d '{ "filter_ids" : ["PGS000001", "PGS000002"] }'
+  276  curl -X GET 'https://www.pgscatalog.org/rest/score/all' -H 'Content-type:application/json'
+  277  -d '{ "filter_ids" : ["PGS000001", "PGS000002"] }'
+  278  curl -X GET "https://www.pgscatalog.org/rest/score/PGS000001" -H  "accept: application/json"
+  279  curl -X GET 'https://www.pgscatalog.org/rest/score/all' -H 'Content-type:application/json' -d '{ "filter_ids" : ["PGS000001", "PGS000002"] }'
+  280  curl -X GET "https://www.pgscatalog.org/rest/score/PGS000001" -H  "accept: application/json"
+  281  history
+  282  curl_setopt($curl, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
+  283  curl -X GET "https://www.pgscatalog.org/rest/score/PGS000001" -H  "accept: application/json"
+  284  curl_setopt($curl, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);\u200b -X GET 'https://www.pgscatalog.org/rest/score/all' -H 'Content-type:application/json' -d '{ "filter_ids" : ["PGS000001", "PGS000002"] }'
+  285  curl --http1.1 -X GET "https://www.pgscatalog.org/rest/score/PGS000001" -H  "accept: application/json"
+  286  pip install jupyterlab
+  287  pip install jupyterlab\n
+  288  Run python get-pip.py
+  289  get-pip.py
+  290  % python --version
+  291  $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  292  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  293  pip3
+  294  install python3
+  295  pip install jupyterlab
+  296  Run python get-pip.py
+  297  get-pip.py
+  298  sudo easy_install pip
+  299  pip install jupyterlab
+  300  -m pip install --upgrade pip
+  301  pip install --upgrade pip
+  302  jupyter-lab
+  303  jupyterlab
+  304  python3
+  305  python3 --version
+  306  pip3 --version
+  307  pip3 install --upgrade pip
+  308  pip3 install jupyter
+  309  jupyter
+  310  jupyter notebook
+  311  R version
+  312  $ brew install git
+  313  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  314  $ brew install git
+  315  $ sudo port install git
+  316  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  317  $ brew install git
+  318  (echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> /Users/stelavilhar/.zprofile\n    eval "$(/usr/local/bin/brew shellenv)"
+  319  $ brew install git
+  320  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  321  $ brew install git
+  322  brew install git
+  323  git config --global user.name "Sstelaa"
+  324  git config --global user.email "vilhar.s@gmail.com"
+  325  git config --global --list
+  326  git config --global core.editor "visual studio code"
+  327  git config --global init.defaultBranch main
+  328  git clone https://github.com/Sstelaa/MRinR.git
+  329  cd MRinR
+  330  ls
+  331  head README.md
+  332  git remote show origin
+  333  echo "A line I wrote on my local computer  " >> README.md\ngit status
+  334  git add README.md
+  335  git commit -m "A commit from my local computer"
+  336  git push
+  337  /Users/stelavilhar/Desktop/plink_mac_20231018/plink ; exit;
+  338  head Height.gwas.txt
+  339  md desktop
+  340  head Height.gwas.txt
+  341  cd desktop
+  342  head Height.gwas.txt
+  343  wc -l Height.gwas.txt
+  344  md5 Height.gwas.txt
+  345  md5sum Height.gwas.txt
+  346  gunzip -c Height.gwas.txt.gz | head\n
+  347  wc -l Height.gwas.txt
+  348  wc -l Height.gwas.txt.gz
+  349  md5 Height.gwas.txt.gz\n
+  350  gunzip -c Height.gwas.txt.gz |\\n\nawk 'NR==1 || ($11 > 0.01) && ($10 > 0.8) {print}' |\\n\ngzip  > Height.gz\n
+  351  gunzip -c Height.gz |\\n\nawk '{seen[$3]++; if(seen[$3]==1){ print}}' |\\ngzip - > Height.nodup.gz
+  352  cd PRStutorialR
+  353  PRStutorialBASH
+  354  cd desktop
+  355  git add
+  356  git add .
+  357  git status
+  358  git commit -m 'docs by bash'
+  359  git remote add origin 'https://github.com/Sstelaa/PRSinR.git'
+  360  git push -u origin master
+  361  git push -u origin main
+  362  history > beginningQC_commands.txt
+  363  git add .
+  364  git status
+  365  git commit -m 'first bit of bash code'
+  366  git push -u origin main
+  367  gunzip -c Height.nodup.gz |\\nawk '!( ($4=="A" && $5=="T") || \\n        ($4=="T" && $5=="A") || \\n        ($4=="G" && $5=="C") || \\n        ($4=="C" && $5=="G")) {print}' |\\ngzip > Height.QC.gz
+  368  wc -l Height.QC.gz
+  369  gunzip -c Height.QC.gz
+  370  cd desktop
+  371  cd PRStutorialR
+  372  cd PRStutorialBASH
+  373  gunzip -c Height.nodup.gz |\\n#awk '!( ($4=="A" && $5=="T") || \\n        ($4=="T" && $5=="A") || \\n        ($4=="G" && $5=="C") || \\n        ($4=="C" && $5=="G")) {print}' |\\n    gzip > Height.QC.gz
+  374  #cleaned for ambiguous SNPs
+  375  #checking the number of SNPs left
+  376  gunzip -c Height.QC.gz |\\nwc -l
