@@ -1,0 +1,26 @@
+PLINK v1.90b7.1 64-bit (18 Oct 2023)
+Options in effect:
+  --bfile EUR.QC
+  --extract EUR.prune.in
+  --out EUR
+  --pca 6
+
+Hostname: Stelas-MacBook-Air.local
+Working directory: /Users/stelavilhar/Desktop/PRStutorialR/PRStutorialBASH
+Start time: Thu Nov 23 13:09:21 2023
+
+Random number seed: 1700744961
+8192 MB RAM detected; reserving 4096 MB for main workspace.
+489805 variants loaded from .bim file.
+483 people (232 males, 251 females) loaded from .fam.
+--extract: 254187 variants remaining.
+Using up to 8 threads (change this with --threads).
+Before main variant filters, 483 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is exactly 1.
+254187 variants and 483 people pass filters and QC.
+Note: No phenotypes present.
+Relationship matrix calculation complete.
+--pca: Results saved to EUR.eigenval and EUR.eigenvec .
+
+End time: Thu Nov 23 13:09:23 2023
